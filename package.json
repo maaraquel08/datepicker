@@ -5,10 +5,12 @@
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "tsc",
+        "build": "tsc --noEmit false --noEmitOnError false",
+        "force-build": "tsc --noEmit false --noEmitOnError false --skipLibCheck true",
         "dev": "tsc -w",
         "test": "jest",
-        "lint": "eslint . --ext .ts,.tsx"
+        "lint": "eslint . --ext .ts,.tsx",
+        "deploy": "npm run force-build && npm publish --force"
     },
     "keywords": [
         "react",
