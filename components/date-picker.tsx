@@ -248,7 +248,7 @@ export function DatePicker({
                         key={month.value}
                         type="button"
                         className={cn(
-                            "h-16 rounded-lg border p-2 text-center transition-all duration-200 hover:bg-gray-50 hover:scale-105",
+                            "h-16 rounded-lg border p-2 text-center transition-all duration-200",
                             currentMonth === month.value &&
                                 "bg-green-600 text-white",
                             isCurrentYear &&
@@ -497,18 +497,17 @@ export function DatePicker({
                                         key={month.value}
                                         type="button"
                                         className={cn(
-                                            "flex items-center justify-center rounded-lg border text-center transition-all duration-200 hover:bg-gray-50 hover:scale-105",
-                                            currentMonth === month.value &&
-                                                "bg-green-600 text-white",
+                                            "flex items-center justify-center rounded-lg border text-center transition-all duration-200",
+                                            currentMonth === month.value
+                                                ? "bg-green-600 text-white"
+                                                : "hover:bg-gray-50 hover:scale-105",
                                             isCurrentYear &&
                                                 today.getMonth() ===
                                                     month.value &&
                                                 !(
                                                     currentMonth === month.value
                                                 ) &&
-                                                "border-green-600",
-                                            currentMonth !== month.value &&
-                                                "hover:bg-gray-50 hover:scale-105"
+                                                "border-green-600"
                                         )}
                                         onClick={() =>
                                             handleMonthClick(month.value)
