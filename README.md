@@ -44,4 +44,4 @@ yarn dev
 
 ## License
 
-MIT © [Your Name]
+MIT © [Mara Raquel]
